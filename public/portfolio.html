@@ -1,0 +1,1533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aamir Hassan Kachkar | QA Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+    <nav id="navbar">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-logo"><span>AHK</span> Portfolio</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certs</a>
+          <a href="#education">Education</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#experience" onclick="closeMobile()">Experience</a>
+      <a href="#projects" onclick="closeMobile()">Projects</a>
+      <a href="#certifications" onclick="closeMobile()">Certifications</a>
+      <a href="#education" onclick="closeMobile()">Education</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section id="hero">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-badge"><span></span> Open to Opportunities</div>
+          <h1 class="hero-name">
+            <span class="first">Aamir</span> Hassan<br />Kachkar
+          </h1>
+          <div class="typewriter-wrap">
+            <span class="typewriter-prefix">&gt;</span>
+            <span id="typewriter"></span>
+            <span class="cursor"></span>
+          </div>
+          <p class="hero-desc">
+            Highly motivated QA Engineer with hands-on expertise in test
+            automation, API validation, and Agile methodologies. Passionate
+            about building reliable, high-quality software that users trust.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> View Projects
+            </a>
+            <a href="resume.html" target="_blank" class="btn btn-ghost">
+              <i class="fa-solid fa-file-lines"></i> View Résumé
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-chip">
+              <div class="num" id="stat-exp">3<span>+</span></div>
+              <div class="label">Years Experience</div>
+            </div>
+            <div class="stat-chip">
+              <div class="num" id="stat-proj">5<span>+</span></div>
+              <div class="label">Projects Delivered</div>
+            </div>
+            <div class="stat-chip">
+              <div class="num" id="stat-tools">20<span>+</span></div>
+              <div class="label">Tools &amp; Frameworks</div>
+            </div>
+            <div class="stat-chip">
+              <div class="num" id="stat-certs">6<span>+</span></div>
+              <div class="label">Certifications</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrap">
+          <div class="hero-blob"></div>
+          <div class="hero-avatar-ring">
+            <div class="hero-avatar-inner">
+              <img src="HeroCard.png" alt="Aamir Hassan Kachkar" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <div class="scroll-mouse"><span></span></div>
+        Scroll down
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-wrap" data-reveal>
+            <div class="about-img-frame">
+              <img src="AamirNew.png" alt="Aamir Hassan" />
+            </div>
+            <div class="about-card">
+              <div class="num">3+</div>
+              <div class="lbl">Years in QA</div>
+            </div>
+          </div>
+
+          <div class="about-text" data-reveal data-delay="2">
+            <div>
+              <div class="section-label">About Me</div>
+              <h2 class="section-title">
+                The Engineer<br /><span>Behind the Quality</span>
+              </h2>
+            </div>
+            <p class="about-p">
+              I'm a Quality Assurance Engineer based in Srinagar, India,
+              specializing in end-to-end test automation across web and mobile
+              platforms. With a strong command of tools like Selenium,
+              Playwright, Cypress, and Appium, I ensure software works
+              flawlessly under every condition.
+            </p>
+            <p class="about-p">
+              I bring a developer's mindset to testing — I've built automation
+              frameworks from scratch, mentored junior QA engineers, and
+              collaborated closely with development teams to catch bugs before
+              they reach production.
+            </p>
+            <div class="about-info-grid">
+              <div class="info-item">
+                <span class="info-label">Email</span>
+                <span class="info-val"
+                  ><a href="mailto:aamirr07@gmail.com"
+                    >aamirr07@gmail.com</a
+                  ></span
+                >
+              </div>
+              <div class="info-item">
+                <span class="info-label">Phone</span>
+                <span class="info-val">+91 8494092667</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-val">Srinagar, J&amp;K, India</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Nationality</span>
+                <span class="info-val">Indian</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Languages</span>
+                <span class="info-val">English, Urdu, Kashmiri, Hindi</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Status</span>
+                <span class="info-val" style="color: var(--green)"
+                  >● Available for work</span
+                >
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap">
+              <a
+                href="resume.html"
+                target="_blank"
+                class="btn btn-primary"
+                style="font-size: 0.85rem; padding: 11px 24px"
+              >
+                <i class="fa-solid fa-download"></i> Download Résumé
+              </a>
+              <a
+                href="#contact"
+                class="btn btn-ghost"
+                style="font-size: 0.85rem; padding: 11px 24px"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Hire Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div data-reveal style="margin-bottom: 40px">
+          <div class="section-label">Expertise</div>
+          <h2 class="section-title">Skills &amp; <span>Technologies</span></h2>
+          <p class="section-sub">
+            A comprehensive toolkit honed through real-world projects and
+            continuous learning.
+          </p>
+        </div>
+
+        <div class="skills-tabs" data-reveal data-delay="1">
+          <button class="skills-tab active" data-tab="automation">
+            Test Automation
+          </button>
+          <button class="skills-tab" data-tab="api">API &amp; Backend</button>
+          <button class="skills-tab" data-tab="frontend">Front-End</button>
+          <button class="skills-tab" data-tab="tools">
+            Tools &amp; Process
+          </button>
+        </div>
+
+        <!-- Automation -->
+        <div class="skills-pane active" id="pane-automation">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(79, 156, 249, 0.15)"
+              >
+                <i class="fa-solid fa-robot" style="color: var(--blue)"></i>
+              </div>
+              <div>
+                <div class="skill-name">Selenium WebDriver</div>
+                <div class="skill-level">Python — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #4f9cf9, #38bdf8)"
+                data-w=".95"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(52, 211, 153, 0.15)"
+              >
+                <i class="fa-solid fa-play" style="color: var(--green)"></i>
+              </div>
+              <div>
+                <div class="skill-name">Playwright</div>
+                <div class="skill-level">Cross-browser E2E — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #34d399, #38bdf8)"
+                data-w=".90"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(167, 139, 250, 0.15)"
+              >
+                <i class="fa-solid fa-vial" style="color: var(--purple)"></i>
+              </div>
+              <div>
+                <div class="skill-name">Cypress</div>
+                <div class="skill-level">JavaScript E2E — Advanced</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #a78bfa, #38bdf8)"
+                data-w=".85"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(244, 185, 66, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-mobile-screen"
+                  style="color: var(--gold)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">Appium</div>
+                <div class="skill-level">Android &amp; iOS — Proficient</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #f4b942, #4f9cf9)"
+                data-w=".80"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(79, 156, 249, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-layer-group"
+                  style="color: var(--blue)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">Katalon Studio</div>
+                <div class="skill-level">Web &amp; API — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #4f9cf9, #a78bfa)"
+                data-w=".88"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(52, 211, 153, 0.15)"
+              >
+                <i class="fa-solid fa-gears" style="color: var(--green)"></i>
+              </div>
+              <div>
+                <div class="skill-name">Robonito &amp; Testim</div>
+                <div class="skill-level">No-code Automation — Proficient</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #34d399, #f4b942)"
+                data-w=".78"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- API -->
+        <div class="skills-pane" id="pane-api">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(244, 185, 66, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-paper-plane"
+                  style="color: var(--gold)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">Postman</div>
+                <div class="skill-level">API Validation — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #f4b942, #4f9cf9)"
+                data-w=".92"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(52, 211, 153, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-network-wired"
+                  style="color: var(--green)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">RESTful API Testing</div>
+                <div class="skill-level">Endpoint Validation — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #34d399, #38bdf8)"
+                data-w=".88"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(79, 156, 249, 0.15)"
+              >
+                <i class="fa-brands fa-python" style="color: var(--blue)"></i>
+              </div>
+              <div>
+                <div class="skill-name">Python</div>
+                <div class="skill-level">
+                  Scripting &amp; Automation — Advanced
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #4f9cf9, #38bdf8)"
+                data-w=".85"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(167, 139, 250, 0.15)"
+              >
+                <i class="fa-solid fa-flask" style="color: var(--purple)"></i>
+              </div>
+              <div>
+                <div class="skill-name">TestNG</div>
+                <div class="skill-level">Test Management — Advanced</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #a78bfa, #4f9cf9)"
+                data-w=".84"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(244, 185, 66, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-gauge-high"
+                  style="color: var(--gold)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">JMeter</div>
+                <div class="skill-level">
+                  Performance &amp; Load Testing — Proficient
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #f4b942, #34d399)"
+                data-w=".80"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skills-pane" id="pane-frontend">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(79, 156, 249, 0.15)"
+              >
+                <i class="fa-brands fa-react" style="color: var(--cyan)"></i>
+              </div>
+              <div>
+                <div class="skill-name">React</div>
+                <div class="skill-level">
+                  Component Development — Proficient
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #38bdf8, #4f9cf9)"
+                data-w=".78"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(244, 185, 66, 0.15)"
+              >
+                <i class="fa-brands fa-js" style="color: var(--gold)"></i>
+              </div>
+              <div>
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-level">ES6+ — Proficient</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #f4b942, #38bdf8)"
+                data-w=".80"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(244, 100, 50, 0.15)"
+              >
+                <i class="fa-brands fa-html5" style="color: #f4643a"></i>
+              </div>
+              <div>
+                <div class="skill-name">HTML5 &amp; CSS3</div>
+                <div class="skill-level">Responsive Layouts — Proficient</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #f4643a, #f4b942)"
+                data-w=".82"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills-pane" id="pane-tools">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(79, 156, 249, 0.15)"
+              >
+                <i class="fa-brands fa-jira" style="color: var(--blue)"></i>
+              </div>
+              <div>
+                <div class="skill-name">JIRA &amp; ClickUp</div>
+                <div class="skill-level">Bug Tracking — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #4f9cf9, #38bdf8)"
+                data-w=".93"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(244, 185, 66, 0.15)"
+              >
+                <i class="fa-brands fa-git-alt" style="color: var(--gold)"></i>
+              </div>
+              <div>
+                <div class="skill-name">Git &amp; GitHub</div>
+                <div class="skill-level">Version Control — Advanced</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #f4b942, #4f9cf9)"
+                data-w=".88"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(52, 211, 153, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-arrows-spin"
+                  style="color: var(--green)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">Agile / Scrum</div>
+                <div class="skill-level">Ceremonies &amp; Sprints — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #34d399, #38bdf8)"
+                data-w=".90"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div
+                class="skill-icon"
+                style="background: rgba(167, 139, 250, 0.15)"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-chart"
+                  style="color: var(--purple)"
+                ></i>
+              </div>
+              <div>
+                <div class="skill-name">Root Cause Analysis</div>
+                <div class="skill-level">Defect Reporting — Expert</div>
+              </div>
+            </div>
+            <div class="skill-bar-bg">
+              <div
+                class="skill-bar-fill"
+                style="background: linear-gradient(90deg, #a78bfa, #38bdf8)"
+                data-w=".92"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div data-reveal style="margin-bottom: 48px">
+          <div class="section-label">Work History</div>
+          <h2 class="section-title">Work <span>Experience</span></h2>
+          <p class="section-sub">
+            Building quality software through automation, collaboration, and
+            continuous improvement.
+          </p>
+        </div>
+
+        <div class="exp-timeline">
+          <div class="exp-item" data-reveal>
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div>
+                  <div class="exp-role">Quality Assurance Engineer</div>
+                  <div class="exp-company">IQuasar Software Solutions</div>
+                </div>
+                <span class="exp-badge">Current Position</span>
+              </div>
+              <div class="exp-type">
+                <i class="fa-solid fa-briefcase"></i> Full-time &nbsp;·&nbsp;
+                Srinagar, India
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Designed &amp; implemented automated test scripts using
+                  <strong>Selenium WebDriver (Python)</strong> and TestNG for
+                  functional, regression, smoke &amp; sanity testing across
+                  diverse web platforms.
+                </li>
+                <li>
+                  Expert in <strong>Playwright</strong> for reliable, fast
+                  cross-browser E2E tests across Chromium, Firefox &amp; WebKit
+                  — handling async elements and complex UI workflows.
+                </li>
+                <li>
+                  Leveraged <strong>Katalon Studio</strong> for comprehensive
+                  end-to-end web &amp; API automation, building modular reusable
+                  test suites.
+                </li>
+                <li>
+                  Automated <strong>API testing with Postman</strong>,
+                  validating core backend services, executing data-driven test
+                  cases, and streamlining RESTful endpoint validation.
+                </li>
+                <li>
+                  Active <strong>Agile/Scrum</strong> participant — sprint
+                  planning, daily stand-ups, grooming sessions &amp;
+                  retrospectives.
+                </li>
+                <li>
+                  Mentored junior QA members on automation best practices;
+                  contributed to defining QA standards across the team.
+                </li>
+                <li>
+                  Worked on client engagement with
+                  <strong>Lucus Labs</strong> performing QA for the AI-based
+                  product <em>Symbient AI</em>.
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Selenium</span>
+                <span class="exp-tag">Playwright</span>
+                <span class="exp-tag">Katalon</span>
+                <span class="exp-tag">Cypress</span>
+                <span class="exp-tag">Postman</span>
+                <span class="exp-tag">Appium</span>
+                <span class="exp-tag">Python</span>
+                <span class="exp-tag">Agile</span>
+                <span class="exp-tag">JIRA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item" data-reveal data-delay="1">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div>
+                  <div class="exp-role">Front-End Developer</div>
+                  <div class="exp-company">Aiiots Geek World</div>
+                </div>
+                <span class="exp-badge">Internship</span>
+              </div>
+              <div class="exp-type">
+                <i class="fa-solid fa-graduation-cap"></i> Internship
+                &nbsp;·&nbsp; Remote
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Built responsive user interfaces using
+                  <strong>HTML, CSS, JavaScript, and React</strong>.
+                </li>
+                <li>
+                  Collaborated with the development team on feature development
+                  and UI/UX improvements.
+                </li>
+                <li>
+                  Gained practical experience in
+                  <strong>component-based architecture</strong> and modern
+                  front-end tooling.
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">HTML</span>
+                <span class="exp-tag">CSS</span>
+                <span class="exp-tag">JavaScript</span>
+                <span class="exp-tag">React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div data-reveal style="margin-bottom: 40px">
+          <div class="section-label">Portfolio</div>
+          <h2 class="section-title">Featured <span>Projects</span></h2>
+          <p class="section-sub">
+            A selection of projects I've worked on — from AI-powered apps to
+            real estate platforms.
+          </p>
+        </div>
+
+        <div class="projects-filter" data-reveal data-delay="1">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="qa">QA Engineering</button>
+          <button class="filter-btn" data-filter="dev">Development</button>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-cat="qa">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #0a2a1a, #0f3d26)"
+            >
+              <span class="project-banner-icon">🛡️</span>
+            </div>
+            <div class="project-body">
+              <span class="project-type-badge badge-qa">QA Engineering</span>
+              <div class="project-title">Sahal</div>
+              <p class="project-desc">
+                Ensured end-to-end quality of web application features through
+                functional, regression, and UI testing. Identified and validated
+                fixes for critical and API-related errors, improving overall
+                system stability and UX.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Selenium</span>
+                <span class="stack-tag">API Testing</span>
+                <span class="stack-tag">Regression</span>
+                <span class="stack-tag">JIRA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-cat="qa">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #1a0e2a, #2d1a4a)"
+            >
+              <span class="project-banner-icon">📋</span>
+            </div>
+            <div class="project-body">
+              <span class="project-type-badge badge-qa">QA Engineering</span>
+              <div class="project-title">Proposal Pro</div>
+              <p class="project-desc">
+                Platform streamlining creation, management, and review of
+                business proposals. Responsible for testing functionality,
+                performance, and reliability across all features as the lead QA
+                Engineer.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Playwright</span>
+                <span class="stack-tag">Functional Testing</span>
+                <span class="stack-tag">Performance</span>
+                <span class="stack-tag">ClickUp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-cat="qa">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #0a1a2a, #0f2a3d)"
+            >
+              <span class="project-banner-icon">🤖</span>
+            </div>
+            <div class="project-body">
+              <span class="project-type-badge badge-qa">QA Engineering</span>
+              <div class="project-title">Symbient AI</div>
+              <p class="project-desc">
+                Client engagement with Lucus Labs — performed QA testing for
+                this AI-based product ensuring functionality, usability, and
+                overall product quality of a cutting-edge intelligent system.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">AI Testing</span>
+                <span class="stack-tag">Exploratory</span>
+                <span class="stack-tag">Usability</span>
+                <span class="stack-tag">API Validation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-cat="dev">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #1a0a0a, #3d1a0f)"
+            >
+              <span class="project-banner-icon">🏠</span>
+            </div>
+            <div class="project-body">
+              <span class="project-type-badge badge-dev">Development</span>
+              <div class="project-title">HomeSphere</div>
+              <p class="project-desc">
+                Real estate management website enabling users to buy, sell, and
+                rent properties online — eliminating travel costs and reducing
+                search time through a seamless digital experience. MCA final
+                project.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML</span>
+                <span class="stack-tag">CSS</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">Real Estate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-cat="dev">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #0a150a, #1a3d1a)"
+            >
+              <span class="project-banner-icon">🏦</span>
+            </div>
+            <div class="project-body">
+              <span class="project-type-badge badge-dev">Development</span>
+              <div class="project-title">E-Banking Platform</div>
+              <p class="project-desc">
+                Online banking platform providing secure access to balance
+                checking, fund transfers, and transaction history. Built with a
+                responsive, interactive UI. BCA final project.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML</span>
+                <span class="stack-tag">CSS</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">Responsive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CERTIFICATIONS ═══════════════════════════════ -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div data-reveal style="margin-bottom: 48px">
+          <div class="section-label">Credentials</div>
+          <h2 class="section-title">
+            Certifications &amp;<br /><span>Achievements</span>
+          </h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card" data-reveal>
+            <div
+              class="cert-icon"
+              style="background: linear-gradient(135deg, #4f9cf9, #38bdf8)"
+            >
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="cert-info">
+              <div class="cert-name">Software Testing with AI Agents</div>
+              <div class="cert-platform">
+                <i
+                  class="fa-solid fa-certificate"
+                  style="color: var(--gold); margin-right: 5px"
+                ></i
+                >Udemy
+              </div>
+              <span class="cert-badge">✓ Verified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-reveal data-delay="1">
+            <div
+              class="cert-icon"
+              style="background: linear-gradient(135deg, #a78bfa, #38bdf8)"
+            >
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="cert-info">
+              <div class="cert-name">
+                Generative AI &amp; AI Agents for QA Automation
+              </div>
+              <div class="cert-platform">
+                <i
+                  class="fa-solid fa-certificate"
+                  style="color: var(--gold); margin-right: 5px"
+                ></i
+                >Udemy
+              </div>
+              <span class="cert-badge">✓ Verified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-reveal data-delay="2">
+            <div
+              class="cert-icon"
+              style="background: linear-gradient(135deg, #f4b942, #f4643a)"
+            >
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="cert-info">
+              <div class="cert-name">JavaScript</div>
+              <div class="cert-platform">
+                <i
+                  class="fa-solid fa-certificate"
+                  style="color: var(--gold); margin-right: 5px"
+                ></i
+                >Udemy
+              </div>
+              <span class="cert-badge">✓ Verified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-reveal>
+            <div
+              class="cert-icon"
+              style="background: linear-gradient(135deg, #f4643a, #f4b942)"
+            >
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="cert-info">
+              <div class="cert-name">HTML and CSS</div>
+              <div class="cert-platform">
+                <i
+                  class="fa-solid fa-certificate"
+                  style="color: var(--gold); margin-right: 5px"
+                ></i
+                >Udemy
+              </div>
+              <span class="cert-badge">✓ Verified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-reveal data-delay="1">
+            <div
+              class="cert-icon"
+              style="background: linear-gradient(135deg, #38bdf8, #4f9cf9)"
+            >
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="cert-info">
+              <div class="cert-name">React</div>
+              <div class="cert-platform">
+                <i
+                  class="fa-solid fa-certificate"
+                  style="color: var(--gold); margin-right: 5px"
+                ></i
+                >Udemy
+              </div>
+              <span class="cert-badge">✓ Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
+    <section id="education" class="section">
+      <div class="container">
+        <div data-reveal style="margin-bottom: 48px">
+          <div class="section-label">Academic Background</div>
+          <h2 class="section-title">Education &amp; <span>Training</span></h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-card" data-reveal>
+            <div class="edu-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-year">2018 – 2022</div>
+            <div class="edu-degree">
+              Master of Computer Applications (M.C.A)
+            </div>
+            <div class="edu-school">University of Kashmir</div>
+          </div>
+          <div class="edu-card" data-reveal data-delay="1">
+            <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
+            <div class="edu-year">2015 – 2018</div>
+            <div class="edu-degree">
+              Bachelor of Computer Science &amp; Applications (B.C.A)
+            </div>
+            <div class="edu-school">Caset College of Computer Science</div>
+          </div>
+          <div class="edu-card" data-reveal data-delay="2">
+            <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="edu-year">2014</div>
+            <div class="edu-degree">12th Grade</div>
+            <div class="edu-school">Green Valley Educational Institute</div>
+          </div>
+          <div class="edu-card" data-reveal data-delay="3">
+            <div class="edu-icon"><i class="fa-solid fa-book-open"></i></div>
+            <div class="edu-year">2009</div>
+            <div class="edu-degree">10th Grade</div>
+            <div class="edu-school">Green Valley Educational Institute</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div data-reveal style="margin-bottom: 48px">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Let's Work <span>Together</span></h2>
+          <p class="section-sub">
+            Have a project in mind or want to discuss an opportunity? I'd love
+            to hear from you.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-detail">
+                <div class="label">Email</div>
+                <div class="val">
+                  <a href="mailto:aamirr07@gmail.com">aamirr07@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-detail">
+                <div class="label">Phone</div>
+                <div class="val">+91 8494092667</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-detail">
+                <div class="label">Location</div>
+                <div class="val">Srinagar, J&amp;K, India</div>
+              </div>
+            </div>
+
+            <div>
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: var(--text-dim);
+                  margin-bottom: 12px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                "
+              >
+                Connect with me
+              </p>
+              <div class="contact-socials">
+                <a
+                  href="mailto:aamirr07@gmail.com"
+                  class="social-btn"
+                  title="Email"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+                <a href="#" class="social-btn" title="LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-btn" title="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="#" class="social-btn" title="Twitter"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            id="contactForm"
+            data-reveal
+            data-delay="2"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="John"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Doe"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-input"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Job Opportunity / Project Collaboration"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea
+                class="form-textarea"
+                placeholder="Tell me about the opportunity or project you have in mind..."
+                required
+              ></textarea>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              Thanks! Your message has been sent. I'll get back to you soon.
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-paper-plane"></i>&nbsp; Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-logo"><span>AHK</span> Portfolio</div>
+        <p class="footer-copy">
+          © 2025 Aamir Hassan Kachkar · Built with HTML, CSS &amp; JavaScript ·
+          <a href="resume.html" target="_blank">View Résumé</a>
+        </p>
+      </div>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ═══════════════════════════════ JAVASCRIPT ═══════════════════════════════ -->
+    <script>
+      /* ────── THEME TOGGLE ────── */
+      (function () {
+        const root   = document.documentElement;
+        const toggle = document.getElementById('themeToggle');
+        const STORAGE_KEY = 'ahk-theme';
+
+        // Apply saved preference immediately (before paint)
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'light') root.classList.add('light');
+
+        toggle.addEventListener('click', () => {
+          const isLight = root.classList.toggle('light');
+          localStorage.setItem(STORAGE_KEY, isLight ? 'light' : 'dark');
+          // Briefly spin the icon for delight
+          toggle.style.transform = 'rotate(360deg)';
+          setTimeout(() => toggle.style.transform = '', 350);
+        });
+      })();
+
+      /* ────── PARTICLES ────── */
+      (function () {
+        const canvas = document.getElementById("particle-canvas");
+        const ctx = canvas.getContext("2d");
+        let W,
+          H,
+          particles = [],
+          mouse = { x: -999, y: -999 };
+
+        function resize() {
+          W = canvas.width = window.innerWidth;
+          H = canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener("resize", resize);
+        document.addEventListener("mousemove", (e) => {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+
+        function createParticle() {
+          return {
+            x: Math.random() * W,
+            y: Math.random() * H,
+            r: Math.random() * 1.5 + 0.5,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            alpha: Math.random() * 0.5 + 0.1,
+          };
+        }
+        for (let i = 0; i < 110; i++) particles.push(createParticle());
+
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          particles.forEach((p) => {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > W) p.vx *= -1;
+            if (p.y < 0 || p.y > H) p.vy *= -1;
+            // mouse attraction (gentle)
+            const dx = mouse.x - p.x,
+              dy = mouse.y - p.y,
+              dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 140) {
+              p.vx += (dx / dist) * 0.015;
+              p.vy += (dy / dist) * 0.015;
+            }
+            // cap speed
+            const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+            if (speed > 1.2) {
+              p.vx = (p.vx / speed) * 1.2;
+              p.vy = (p.vy / speed) * 1.2;
+            }
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(79,156,249,${p.alpha})`;
+            ctx.fill();
+          });
+          // connections
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x,
+                dy = particles[i].y - particles[j].y;
+              const d = Math.sqrt(dx * dx + dy * dy);
+              if (d < 120) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(79,156,249,${0.15 * (1 - d / 120)})`;
+                ctx.lineWidth = 0.6;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(draw);
+        }
+        draw();
+      })();
+
+      /* ────── TYPEWRITER ────── */
+      (function () {
+        const words = [
+          "QA Engineer",
+          "Test Automation Expert",
+          "Selenium Specialist",
+          "Playwright Developer",
+          "API Testing Pro",
+          "Agile Team Player",
+        ];
+        const el = document.getElementById("typewriter");
+        let wIdx = 0,
+          cIdx = 0,
+          deleting = false,
+          delay = 120;
+        function type() {
+          const word = words[wIdx];
+          if (!deleting) {
+            el.textContent = word.slice(0, ++cIdx);
+            if (cIdx === word.length) {
+              deleting = true;
+              delay = 2400;
+            } else delay = 90;
+          } else {
+            el.textContent = word.slice(0, --cIdx);
+            delay = 50;
+            if (cIdx === 0) {
+              deleting = false;
+              wIdx = (wIdx + 1) % words.length;
+              delay = 300;
+            }
+          }
+          setTimeout(type, delay);
+        }
+        type();
+      })();
+
+      /* ────── COUNTER ANIMATION ────── */
+      function animateCount(el, target, suffix = "") {
+        let start = 0;
+        const dur = 1800;
+        const step = (timestamp) => {
+          if (!step.start) step.start = timestamp;
+          const progress = Math.min((timestamp - step.start) / dur, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          el.querySelector(".num").innerHTML =
+            Math.round(ease * target) + "<span>" + suffix + "</span>";
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+      let countersDone = false;
+      function tryCounters() {
+        if (countersDone) return;
+        const heroSection = document.getElementById("hero");
+        const rect = heroSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          countersDone = true;
+          animateCount(document.getElementById("stat-exp"), 4, "+");
+          animateCount(document.getElementById("stat-proj"), 5, "+");
+          animateCount(document.getElementById("stat-tools"), 12, "+");
+          animateCount(document.getElementById("stat-certs"), 5, "+");
+        }
+      }
+      window.addEventListener("scroll", tryCounters);
+      setTimeout(tryCounters, 800);
+
+      /* ────── NAVBAR ────── */
+      const navbar = document.getElementById("navbar");
+      const sections = document.querySelectorAll("section[id]");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 40);
+        // active nav link
+        let current = "";
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 120) current = s.id;
+        });
+        document.querySelectorAll(".nav-links a").forEach((a) => {
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + current,
+          );
+        });
+        // back to top
+        document
+          .getElementById("backTop")
+          .classList.toggle("show", window.scrollY > 400);
+      });
+
+      /* ────── HAMBURGER ────── */
+      const hamburger = document.getElementById("hamburger"),
+        mobileMenu = document.getElementById("mobile-menu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+      });
+      function closeMobile() {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+      }
+
+      /* ────── SKILL TABS ────── */
+      document.querySelectorAll(".skills-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".skills-tab")
+            .forEach((t) => t.classList.remove("active"));
+          document
+            .querySelectorAll(".skills-pane")
+            .forEach((p) => p.classList.remove("active"));
+          tab.classList.add("active");
+          const pane = document.getElementById("pane-" + tab.dataset.tab);
+          pane.classList.add("active");
+          // animate bars in new pane
+          setTimeout(() => {
+            pane.querySelectorAll(".skill-bar-fill").forEach((b) => {
+              b.style.transform = `scaleX(${b.dataset.w})`;
+            });
+          }, 80);
+        });
+      });
+
+      /* ────── PROJECT FILTER ────── */
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+          document.querySelectorAll(".project-card").forEach((card, i) => {
+            const match = filter === "all" || card.dataset.cat === filter;
+            card.setAttribute("data-hidden", match ? "false" : "true");
+            if (match) {
+              setTimeout(() => card.classList.add("show"), i * 80);
+            } else {
+              card.classList.remove("show");
+            }
+          });
+        });
+      });
+
+      /* ────── INTERSECTION OBSERVER ────── */
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            el.classList.add("revealed", "show");
+            // stagger children
+            el.querySelectorAll(
+              ".project-card,.cert-card,.edu-card,.exp-item",
+            ).forEach((child, i) => {
+              setTimeout(() => child.classList.add("show"), i * 100);
+            });
+            // skill bars
+            el.querySelectorAll(".skill-bar-fill").forEach((b) => {
+              b.style.transform = `scaleX(${b.dataset.w})`;
+            });
+            io.unobserve(el);
+          });
+        },
+        { threshold: 0.08 },
+      );
+
+      document
+        .querySelectorAll(
+          "[data-reveal],.exp-item,.project-card,.cert-card,.edu-card",
+        )
+        .forEach((el) => io.observe(el));
+
+      // Animate initial (visible) skill bars on load
+      setTimeout(() => {
+        document
+          .querySelectorAll("#pane-automation .skill-bar-fill")
+          .forEach((b) => {
+            b.style.transform = `scaleX(${b.dataset.w})`;
+          });
+      }, 600);
+
+      /* ────── CONTACT FORM ────── */
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector(".btn-submit");
+        btn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Sending...';
+        btn.disabled = true;
+        setTimeout(() => {
+          document.getElementById("formSuccess").classList.add("show");
+          btn.style.display = "none";
+          e.target.reset();
+        }, 1600);
+      });
+
+      /* ────── BACK TO TOP ────── */
+      document.getElementById("backTop").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

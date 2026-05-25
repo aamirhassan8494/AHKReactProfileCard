@@ -1,2 +1,0 @@
-# AHKReactProfileCard
-Created with CodeSandbox

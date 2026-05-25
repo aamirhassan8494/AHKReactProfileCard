@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aamir Hassan Kachkar — QA Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ─────────────────────────────────────────
+       RESET & TOKENS
+    ───────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy:      #0d1b2a;
+      --navy-mid:  #1b2d45;
+      --navy-light:#243b55;
+      --accent:    #4f9cf9;
+      --accent-2:  #38bdf8;
+      --gold:      #f4b942;
+      --white:     #ffffff;
+      --off-white: #f8fafc;
+      --gray-100:  #f1f5f9;
+      --gray-200:  #e2e8f0;
+      --gray-400:  #94a3b8;
+      --gray-600:  #475569;
+      --gray-800:  #1e293b;
+      --text:      #1e293b;
+      --sidebar-w: 280px;
+      --radius:    12px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+      --shadow-md: 0 8px 24px rgba(0,0,0,.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,.18);
+      --transition: .25s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 50%, #0d1b2a 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px;
+      color: var(--text);
+    }
+
+    /* ─────────────────────────────────────────
+       TOP ACTION BAR
+    ───────────────────────────────────────── */
+    .action-bar {
+      width: 100%;
+      max-width: 1080px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition);
+      letter-spacing: .3px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(79,156,249,.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(79,156,249,.55);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,.35);
+      backdrop-filter: blur(6px);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+      border-color: rgba(255,255,255,.6);
+      transform: translateY(-2px);
+    }
+
+    /* ─────────────────────────────────────────
+       RESUME SHELL
+    ───────────────────────────────────────── */
+    .resume {
+      width: 100%;
+      max-width: 1080px;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: var(--white);
+      animation: fadeUp .6s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(30px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    /* ─────────────────────────────────────────
+       SIDEBAR
+    ───────────────────────────────────────── */
+    .sidebar {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 40px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Avatar */
+    .avatar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar-ring {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+      box-shadow: 0 0 0 6px rgba(79,156,249,.15);
+    }
+
+    .avatar-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      background: var(--navy-mid);
+    }
+
+    .sidebar-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .sidebar-title {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      text-align: center;
+    }
+
+    /* Sidebar sections */
+    .s-section { display: flex; flex-direction: column; gap: 14px; }
+
+    .s-heading {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(244,185,66,.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .s-heading i { font-size: .75rem; }
+
+    /* Contact */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--gray-200);
+      font-size: .8rem;
+      line-height: 1.5;
+    }
+    .contact-item i {
+      width: 16px;
+      margin-top: 2px;
+      color: var(--accent-2);
+      flex-shrink: 0;
+      font-size: .8rem;
+    }
+    .contact-item a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* Skill bars */
+    .skill-group { display: flex; flex-direction: column; gap: 10px; }
+
+    .skill-item-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .75rem;
+      color: var(--gray-200);
+      margin-bottom: 4px;
+    }
+    .skill-item-label span:last-child { color: var(--accent-2); font-size: .68rem; font-weight: 600; }
+
+    .skill-bar-bg {
+      height: 5px;
+      background: rgba(255,255,255,.1);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    .skill-bar-fill.animated { transform: scaleX(1); }
+
+    /* Tag pills */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: .68rem;
+      font-weight: 500;
+      background: rgba(79,156,249,.15);
+      color: var(--accent-2);
+      border: 1px solid rgba(79,156,249,.25);
+      transition: all var(--transition);
+    }
+    .tag:hover {
+      background: rgba(79,156,249,.3);
+      transform: translateY(-1px);
+    }
+
+    /* Languages */
+    .lang-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .78rem;
+      color: var(--gray-200);
+    }
+    .lang-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+      flex-shrink: 0;
+    }
+
+    /* Interests */
+    .interest-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .78rem;
+      color: var(--gray-200);
+    }
+    .interest-item i { color: var(--gold); width: 14px; font-size: .75rem; }
+
+    /* ─────────────────────────────────────────
+       MAIN CONTENT
+    ───────────────────────────────────────── */
+    .main {
+      background: var(--white);
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* Hero header */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid var(--gray-100);
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.1;
+      letter-spacing: -.5px;
+    }
+    .hero-name span { color: var(--accent); }
+
+    .hero-title {
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gray-600);
+    }
+
+    .hero-desc {
+      margin-top: 10px;
+      font-size: .88rem;
+      line-height: 1.75;
+      color: var(--gray-600);
+      max-width: 620px;
+    }
+
+    /* Main section */
+    .m-section { display: flex; flex-direction: column; gap: 20px; }
+
+    .m-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .m-heading::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 18px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      flex-shrink: 0;
+    }
+    .m-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200);
+    }
+
+    /* Timeline */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 0 18px;
+      opacity: 0;
+      transform: translateX(-16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .tl-item.visible { opacity:1; transform: translateX(0); }
+
+    .tl-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 3px rgba(79,156,249,.2);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .tl-line {
+      width: 2px;
+      flex: 1;
+      background: linear-gradient(to bottom, var(--accent-2), transparent);
+      min-height: 16px;
+      margin-top: 4px;
+    }
+
+    .tl-content { padding-bottom: 28px; }
+    .tl-item:last-child .tl-content { padding-bottom: 0; }
+
+    .tl-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+
+    .tl-title {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .tl-company {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .tl-badge {
+      font-size: .68rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+      background: var(--gray-100);
+      color: var(--gray-600);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .tl-bullets {
+      margin-top: 10px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .tl-bullets li {
+      font-size: .82rem;
+      line-height: 1.65;
+      color: var(--gray-600);
+      padding-left: 16px;
+      position: relative;
+    }
+    .tl-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: .7rem;
+      top: 3px;
+    }
+
+    /* Project cards */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .project-card {
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      background: var(--off-white);
+      transition: all var(--transition);
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    .project-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .project-title {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-title i { color: var(--accent); font-size: .8rem; }
+
+    .project-desc {
+      font-size: .78rem;
+      line-height: 1.65;
+      color: var(--gray-600);
+    }
+
+    /* Certification */
+    .cert-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      transition: all var(--transition);
+    }
+    .cert-item:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); transform: translateX(4px); }
+
+    .cert-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--white);
+      font-size: .85rem;
+    }
+
+    .cert-info { flex: 1; }
+    .cert-name { font-size: .82rem; font-weight: 600; color: var(--navy); }
+    .cert-platform { font-size: .72rem; color: var(--gray-400); margin-top: 2px; }
+
+    /* Skills in main */
+    .skills-main-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .skill-pill-group { display: flex; flex-direction: column; gap: 6px; }
+
+    .skill-cat-title {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--gray-200);
+      margin-bottom: 4px;
+    }
+
+    .skill-tag-main {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: .72rem;
+      font-weight: 500;
+      background: var(--gray-100);
+      color: var(--gray-800);
+      margin: 3px 3px 0 0;
+      transition: all var(--transition);
+    }
+    .skill-tag-main:hover {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ─────────────────────────────────────────
+       PRINT STYLES
+    ───────────────────────────────────────── */
+    @media print {
+      body { background: white; padding: 0; }
+      .action-bar { display: none; }
+      .resume {
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        animation: none;
+      }
+      .tl-item, .project-card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .skill-bar-fill { transform: scaleX(1) !important; }
+      @page { margin: 0; size: A4; }
+    }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 768px) {
+      :root { --sidebar-w: 100%; }
+      .resume { grid-template-columns: 1fr; }
+      .main { padding: 32px 24px; }
+      .hero-name { font-size: 2rem; }
+      .project-grid { grid-template-columns: 1fr; }
+      .skills-main-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .skills-main-grid { grid-template-columns: 1fr; }
+      .main { padding: 24px 16px; }
+    }
+
+    /* ─────────────────────────────────────────
+       SCROLL ANIMATIONS
+    ───────────────────────────────────────── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── ACTION BAR ── -->
+  <div class="action-bar">
+    <button class="btn btn-outline" onclick="window.print()">
+      <i class="fa-solid fa-print"></i> Print
+    </button>
+    <button class="btn btn-primary" id="downloadBtn">
+      <i class="fa-solid fa-download"></i> Download PDF
+    </button>
+  </div>
+
+  <!-- ── RESUME SHELL ── -->
+  <div class="resume" id="resume">
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="sidebar">
+
+      <!-- Avatar -->
+      <div class="avatar-wrap">
+        <div class="avatar-ring">
+          <img src="Aamir Hassan.png" alt="Aamir Hassan Kachkar" />
+        </div>
+        <div class="sidebar-name">Aamir Hassan<br/>Kachkar</div>
+        <div class="sidebar-title">Quality Assurance Engineer</div>
+      </div>
+
+      <!-- Contact -->
+      <div class="s-section">
+        <div class="s-heading"><i class="fa-solid fa-address-card"></i> Contact</div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+91 8494092667</span></div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:aamirr07@gmail.com">aamirr07@gmail.com</a></div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Shah Faisal Colony, Ellahi Bagh, Buchpora, Srinagar</span></div>
+      </div>
+
+      <!-- Core Skills / Progress Bars -->
+      <div class="s-section">
+        <div class="s-heading"><i class="fa-solid fa-chart-bar"></i> Core Competencies</div>
+        <div class="skill-group">
+          <div>
+            <div class="skill-item-label"><span>Test Automation</span><span>95%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Selenium / Python</span><span>90%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Playwright</span><span>88%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>API Testing</span><span>85%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Cypress</span><span>82%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>React / JavaScript</span><span>78%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="s-section">
+        <div class="s-heading"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</div>
+        <div class="tag-cloud">
+          <span class="tag">Selenium</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">Cypress</span>
+          <span class="tag">Katalon</span>
+          <span class="tag">Appium</span>
+          <span class="tag">Postman</span>
+          <span class="tag">TestNG</span>
+          <span class="tag">Robonito</span>
+          <span class="tag">Testim</span>
+          <span class="tag">JIRA</span>
+          <span class="tag">ClickUp</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="s-section">
+        <div class="s-heading"><i class="fa-solid fa-language"></i> Languages</div>
+        <div class="lang-item"><div class="lang-dot"></div>English</div>
+        <div class="lang-item"><div class="lang-dot"></div>Urdu</div>
+        <div class="lang-item"><div class="lang-dot"></div>Kashmiri</div>
+        <div class="lang-item"><div class="lang-dot"></div>Hindi</div>
+      </div>
+
+      <!-- Interests -->
+      <div class="s-section">
+        <div class="s-heading"><i class="fa-solid fa-heart"></i> Interests</div>
+        <div class="interest-item"><i class="fa-solid fa-mountain"></i>Hiking &amp; Trekking</div>
+        <div class="interest-item"><i class="fa-solid fa-plane"></i>Travelling</div>
+        <div class="interest-item"><i class="fa-solid fa-bicycle"></i>Cycling</div>
+        <div class="interest-item"><i class="fa-solid fa-cricket-bat-ball"></i>Cricket</div>
+      </div>
+
+    </aside>
+
+    <!-- ══════════ MAIN ══════════ -->
+    <main class="main">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-name"><span>Aamir</span> Hassan Kachkar</div>
+        <div class="hero-title">Quality Assurance Engineer</div>
+        <p class="hero-desc">
+          Highly motivated and skilled Quality Assurance professional with hands-on
+          expertise in test automation, API validation, and Agile methodologies.
+          Seeking a challenging position to expand knowledge and deliver exceptional
+          software quality at scale.
+        </p>
+      </div>
+
+      <!-- Work Experience -->
+      <section class="m-section" data-reveal>
+        <div class="m-heading">Work Experience</div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-title">Quality Assurance Engineer</div>
+                  <div class="tl-company">IQuasar Software Solutions</div>
+                </div>
+                <span class="tl-badge">Present</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Designed and implemented automated test scripts using <strong>Selenium WebDriver (Python)</strong> and TestNG for functional, regression, smoke, and sanity testing across diverse web platforms.</li>
+                <li>Expert in <strong>Playwright</strong> for reliable, fast, cross-browser E2E tests across Chromium, Firefox, and WebKit, handling async elements and complex UI workflows.</li>
+                <li>Leveraged <strong>Katalon Studio</strong> for comprehensive end-to-end web &amp; API automation with modular, reusable test suites.</li>
+                <li>Automated <strong>API testing with Postman</strong>, validating backend services, executing data-driven cases, and streamlining RESTful endpoint validation.</li>
+                <li>Active <strong>Agile/Scrum</strong> participant — sprint planning, daily stand-ups, grooming &amp; retrospectives with developers, QA peers, and business analysts.</li>
+                <li>Conducted detailed defect reporting &amp; root cause analysis, providing clear reproduction steps, logs, and screenshots to expedite resolution.</li>
+                <li>Mentored junior QA team members on test automation best practices; contributed to defining QA standards across the team.</li>
+                <li>Worked on client engagement with <strong>Lucus Labs</strong>, performing QA for AI-based product <em>Symbient AI</em>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-title">Front-End Developer Intern</div>
+                  <div class="tl-company">Aiiots Geek World</div>
+                </div>
+                <span class="tl-badge">Internship</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Built responsive user interfaces using <strong>HTML, CSS, JavaScript, and React</strong>.</li>
+                <li>Collaborated with the development team on feature development and UI/UX improvements.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="m-section" data-reveal>
+        <div class="m-heading">Technical Skills</div>
+        <div class="skills-main-grid">
+          <div class="skill-pill-group">
+            <div class="skill-cat-title">Test Automation</div>
+            <div>
+              <span class="skill-tag-main">Selenium</span>
+              <span class="skill-tag-main">Playwright</span>
+              <span class="skill-tag-main">Cypress</span>
+              <span class="skill-tag-main">Katalon</span>
+              <span class="skill-tag-main">Appium</span>
+              <span class="skill-tag-main">Robonito</span>
+              <span class="skill-tag-main">Testim</span>
+            </div>
+          </div>
+          <div class="skill-pill-group">
+            <div class="skill-cat-title">API & Backend</div>
+            <div>
+              <span class="skill-tag-main">Postman</span>
+              <span class="skill-tag-main">RESTful API</span>
+              <span class="skill-tag-main">Python</span>
+              <span class="skill-tag-main">TestNG</span>
+            </div>
+          </div>
+          <div class="skill-pill-group">
+            <div class="skill-cat-title">Front-End</div>
+            <div>
+              <span class="skill-tag-main">React</span>
+              <span class="skill-tag-main">JavaScript</span>
+              <span class="skill-tag-main">HTML</span>
+              <span class="skill-tag-main">CSS</span>
+            </div>
+          </div>
+          <div class="skill-pill-group">
+            <div class="skill-cat-title">Testing Types</div>
+            <div>
+              <span class="skill-tag-main">Regression</span>
+              <span class="skill-tag-main">Smoke</span>
+              <span class="skill-tag-main">Sanity</span>
+              <span class="skill-tag-main">E2E</span>
+              <span class="skill-tag-main">Mobile</span>
+              <span class="skill-tag-main">Cross-Browser</span>
+            </div>
+          </div>
+          <div class="skill-pill-group">
+            <div class="skill-cat-title">Bug Tracking</div>
+            <div>
+              <span class="skill-tag-main">JIRA</span>
+              <span class="skill-tag-main">ClickUp</span>
+              <span class="skill-tag-main">Root Cause Analysis</span>
+            </div>
+          </div>
+          <div class="skill-pill-group">
+            <div class="skill-cat-title">Methodologies</div>
+            <div>
+              <span class="skill-tag-main">Agile / Scrum</span>
+              <span class="skill-tag-main">Sprint Planning</span>
+              <span class="skill-tag-main">Git</span>
+              <span class="skill-tag-main">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="m-section" data-reveal>
+        <div class="m-heading">Projects</div>
+        <div class="project-grid">
+
+          <div class="project-card">
+            <div class="project-title"><i class="fa-solid fa-shield-halved"></i> Sahal</div>
+            <p class="project-desc">Worked as QA Engineer ensuring end-to-end quality through functional, regression, and UI testing. Identified and validated fixes for critical issues including backend and API-related errors, improving system stability and UX.</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title"><i class="fa-solid fa-file-contract"></i> Proposal Pro</div>
+            <p class="project-desc">A platform streamlining creation, management, and review of business proposals. Responsible for testing functionality, performance, and overall reliability across all features as QA Engineer.</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title"><i class="fa-solid fa-house"></i> HomeSphere (MCA)</div>
+            <p class="project-desc">Real estate management website enabling users to buy, sell, and rent property online. Designed to eliminate travel costs and reduce property-search time through a seamless digital experience.</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title"><i class="fa-solid fa-building-columns"></i> E-Banking (BCA)</div>
+            <p class="project-desc">Online banking platform providing secure access to balance checking, fund transfers, and transaction history. Built with HTML, CSS, and JavaScript focusing on responsive, interactive UX.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="m-section" data-reveal>
+        <div class="m-heading">Education</div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-title">Master of Computer Applications (M.C.A)</div>
+                  <div class="tl-company">University of Kashmir</div>
+                </div>
+                <span class="tl-badge">2018 – 2022</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-title">Bachelor of Computer Science & Applications (B.C.A)</div>
+                  <div class="tl-company">Caset College of Computer Science</div>
+                </div>
+                <span class="tl-badge">2015 – 2018</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-title">12th Grade</div>
+                  <div class="tl-company">Green Valley Educational Institute</div>
+                </div>
+                <span class="tl-badge">2014</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot"></div></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-title">10th Grade</div>
+                  <div class="tl-company">Green Valley Educational Institute</div>
+                </div>
+                <span class="tl-badge">2009</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="m-section" data-reveal>
+        <div class="m-heading">Certifications</div>
+        <div class="cert-list">
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="cert-info">
+              <div class="cert-name">Software Testing with AI Agents</div>
+              <div class="cert-platform">Udemy</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="cert-info">
+              <div class="cert-name">Generative AI and AI Agents for QA Automation</div>
+              <div class="cert-platform">Udemy</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fa-brands fa-js"></i></div>
+            <div class="cert-info">
+              <div class="cert-name">JavaScript</div>
+              <div class="cert-platform">Udemy</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="cert-info">
+              <div class="cert-name">HTML and CSS</div>
+              <div class="cert-platform">Udemy</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fa-brands fa-react"></i></div>
+            <div class="cert-info">
+              <div class="cert-name">React</div>
+              <div class="cert-platform">Udemy</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div><!-- /resume -->
+
+  <!-- ─────────────────────────────────────────
+       JAVASCRIPT
+  ───────────────────────────────────────── -->
+  <script>
+    /* ── Animate skill bars on page load ── */
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          const w = bar.dataset.width / 100;
+          bar.style.transform = `scaleX(${w})`;
+          bar.classList.add('animated');
+        });
+      }, 400);
+    });
+
+    /* ── Intersection Observer for scroll reveals ── */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed', 'visible');
+          // stagger children project cards
+          e.target.querySelectorAll('.project-card, .tl-item').forEach((el, i) => {
+            setTimeout(() => el.classList.add('visible'), i * 100);
+          });
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-reveal], .tl-item, .project-card').forEach(el => io.observe(el));
+
+    /* ── Download PDF via print dialog ── */
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const origTitle = document.title;
+      document.title = 'Aamir Hassan Kachkar - Resume';
+      window.print();
+      document.title = origTitle;
+    });
+  </script>
+
+</body>
+</html>
